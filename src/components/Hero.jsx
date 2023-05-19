@@ -1,63 +1,58 @@
-import Image from 'next/image'
-
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-
 export function Hero() {
-  const backgroundImage = "https://images.unsplash.com/photo-1485627941502-d2e6429a8af0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
   return (
-    <div className="relative pt-10 pb-20 sm:py-24">
-      <div className="absolute inset-x-0 -top-48 -bottom-14 overflow-hidden">
-       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          <div className="h-full w-full object-cover object-center backdrop-filter relative" >
-            <Image
-              src={backgroundImage}
-              alt="backgroundImage"
-              layout="fill"
+    <>
+      {/* <div className="isolate bg-white">
+        <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+          <svg
+            className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+            viewBox="0 0 1155 678"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
+              fillOpacity=".3"
+              d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
             />
+            <defs>
+              <linearGradient
+                id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+                x1="1155.49"
+                x2="-78.208"
+                y1=".177"
+                y2="474.645"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#9089FC" />
+                <stop offset={1} stopColor="#FF80B5" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div> */}
+      <div className="relative px-6 lg:px-8 py-20">
+        <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+          <div>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+              SIG Consultoría Integral S.A.S
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+              Consultoría personalizada para mejorar su rendimiento empresarial. Soluciones a medida. 
+            </p>
+            <div className="mt-8 flex gap-x-4 sm:justify-center">
+              <a
+                href="#ContactUs"
+                className="inline-block rounded-lg bg-sky-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-sky-600 hover:bg-sky-700 hover:ring-sky-700"
+              >
+                Contacta con nosotros
+                <span className="text-sky-200" aria-hidden="true">
+                  &rarr;
+                </span>
+              </a>
+            </div>
           </div>
         </div>
-        <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
       </div>
-      <Container className="relative">
-        <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
-          <h1 className="font-display text-5xl font-bold tracking-tighter text-sky-600 sm:text-7xl text-justify">
-            <span className="sr-only">DeceptiConf - </span>A design conference
-            for the dark side.
-          </h1>
-          <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-teal-900 text-justify">
-            <p>
-              The next generation of web users are tech-savvy and suspicious.
-              They know how to use dev tools, they can detect a phishing scam
-              from a mile away, and they certainly aren’t accepting any checks
-              from Western Union.
-            </p>
-            <p>
-              At DeceptiConf you’ll learn about the latest dark patterns being
-              developed to trick even the smartest visitors, and you’ll learn
-              how to deploy them without ever being detected.
-            </p>
-          </div>
-          <Button href="#" className="mt-10 w-full sm:hidden">
-            Get your tickets
-          </Button>
-          <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-16 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
-            {[
-              ['Speakers', '18'],
-              ['People Attending', '2,091'],
-              ['Venue', 'Staples Center'],
-              ['Location', 'Los Angeles'],
-            ].map(([name, value]) => (
-              <div key={name}>
-                <dt className="font-mono text-sm text-sky-600">{name}</dt>
-                <dd className="mt-0.5 text-2xl font-semibold tracking-tight text-teal-900">
-                  {value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </Container>
-    </div>
+    </>
   )
 }

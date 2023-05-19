@@ -2,12 +2,12 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 
 export function ContactUs() {
   return (
-    <section id="ContactUs" className="py-20">
+    <section id="ContactUs" className="pb-20">
     <div className="relative bg-gray-100">
       <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
         <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
           <div className="mx-auto max-w-lg">
-            <h2 className="text-2xl font-bold tracking-tight text-teal-600 sm:text-3xl">Contáctanos</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-sky-600 sm:text-3xl">Contáctanos</h2>
             <p className="mt-3 text-lg leading-6 text-gray-500">
               Estaremos respondiendo lo mas pronto posible.
             </p>
@@ -41,7 +41,7 @@ export function ContactUs() {
                   name="name"
                   id="name"
                   autoComplete="name"
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-sky-500 focus:ring-sky-500"
                   placeholder="Nombre *"
                 />
               </div>
@@ -54,7 +54,7 @@ export function ContactUs() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-sky-500 focus:ring-sky-500"
                   placeholder="Email *"
                 />
               </div>
@@ -67,7 +67,7 @@ export function ContactUs() {
                   name="phone"
                   id="phone"
                   autoComplete="tel"
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-sky-500 focus:ring-sky-500"
                   placeholder="Número de teléfono *"
                 />
               </div>
@@ -79,7 +79,7 @@ export function ContactUs() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-sky-500 focus:ring-sky-500"
                   placeholder="Mensaje *"
                   defaultValue={''}
                 />
@@ -87,7 +87,7 @@ export function ContactUs() {
               <div>
                 <button
                   type="submit"
-                  className="inline-flex justify-center rounded-md border border-transparent bg-teal-600 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                  className="inline-flex justify-center rounded-md border border-transparent bg-sky-600 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
                 >
                   Enviar
                 </button>
