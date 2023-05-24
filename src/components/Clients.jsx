@@ -12,11 +12,11 @@ import transpais from '../images/transpais.png'
 const customers = [
   { name: 'cireem', img: cireem },
   { name: 'commercial', img: commercial },
-  { name: 'galar', img: galar },
+  { name: 'procesos', img: procesos },
   { name: 'luzYcolor', img: luzYcolor },
   { name: 'megavet', img: megavet },
   { name: 'perficort', img: perficort },
-  { name: 'procesos', img: procesos },
+  { name: 'galar', img: galar },
   { name: 'transpais', img: transpais },
 ]
 

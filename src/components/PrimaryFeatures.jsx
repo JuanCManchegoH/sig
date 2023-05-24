@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 import { Container } from '@/components/Container'
-import { BoltIcon } from '@heroicons/react/24/solid'
+import { BriefcaseIcon, CheckBadgeIcon, TruckIcon, UserGroupIcon } from '@heroicons/react/24/solid'
 // import screenshotContacts from '@/images/screenshots/contacts.png'
 // import screenshotInventory from '@/images/screenshots/inventory.png'
 // import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
@@ -12,7 +12,7 @@ const features = [
   {
     name: 'CERTIFICACIONES ISO Y RUC',
     summary: 'CERTIFICACIONES ISO Y RUC',
-    icon: BoltIcon,
+    icon: CheckBadgeIcon,
     description: ''
   },
   {
@@ -40,10 +40,10 @@ const features = [
           ]
         }
       ],
-    icon: BoltIcon,
+    icon: BriefcaseIcon,
   },
   {
-    name: 'PLAN ESTRATEGICO DE SEGURIDAD VIAL.',
+    name: 'PLAN ESTRATEGICO DE SEGURIDAD VIAL',
     summary:
       'PLAN ESTRATEGICO DE SEGURIDAD VIAL.',
     description:
@@ -58,7 +58,7 @@ const features = [
       'Auditorías al PESV verificando el cumplimiento de los requisitos.',
       'Medición de indicadores de gestión aplicables.'
     ],
-    icon: BoltIcon,
+    icon: TruckIcon,
   },
   {
     name: 'GESTIÓN HUMANA.',
@@ -75,14 +75,14 @@ const features = [
       'Apoyo en la selección de personal, permitiendo fidelización de los equipos de trabajo'
     ],
     // image: screenshotContacts,
-    icon: BoltIcon,
+    icon: UserGroupIcon,
   },
 ]
 
 function Feature({ feature, isActive, className, ...props }) {
   return (
     <div
-      className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
+      className={clsx(className, 'flex flex-col items-center text-center')}
       {...props}
     >
       <div
@@ -91,13 +91,13 @@ function Feature({ feature, isActive, className, ...props }) {
           isActive ? 'bg-sky-400' : 'bg-slate-100'
         )}
       >
-        <svg aria-hidden="true" className="h-12 w-12 p-2 text-slate-700" fill="none">
+        <svg aria-hidden="true" className={clsx(isActive ? 'text-white' : 'text-slate-700', 'h-12 w-12 p-2')} fill="none">
           <feature.icon />
         </svg>
       </div>
       <h3
         className={clsx(
-          'mt-2 font-display text-xl text-left text-slate-900',
+          'mt-2 font-display text-base text-slate-900 text-center',
           isActive ? 'text-sky-400' : 'text-slate-600'
         )}
       >
@@ -120,7 +120,7 @@ function FeaturesDesktop() {
                 feature={{
                   ...feature,
                   name: (
-                    <Tab className="[&:not(:focus-visible)]:focus:outline-none text-left">
+                    <Tab className="[&:not(:focus-visible)]:focus:outline-none text-center">
                       <span className="absolute inset-0" />
                       {feature.name}
                     </Tab>
@@ -143,7 +143,7 @@ function FeaturesDesktop() {
                 style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                 aria-hidden={0 !== selectedIndex}
               >
-                <div className="w-[62.75rem] max-h-[60vh] overflow-y-auto rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+                <div className="w-[73rem] max-h-[60vh] overflow-y-auto rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
                   <div className='prose prose-lg prose-indigo p-4 text-gray-500'>
                     <h3>CERTIFICACIONES ISO Y RUC </h3>
                     <h4>ISO 14001 - 2015</h4>
@@ -334,7 +334,7 @@ function FeaturesDesktop() {
                 style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                 aria-hidden={1 !== selectedIndex}
               >
-                <div className="w-[62.75rem] max-h-[60vh] overflow-y-auto rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+                <div className="w-[73rem] max-h-[60vh] overflow-y-auto rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
                   <div className='p-4'>
                     <dt className="text-base font-semibold leading-7 text-gray-900">SISTEMA DE GESTIÓN DE SEGURIDAD Y SALUD EN EL TRABAJO</dt>
                     <div className="prose prose-lg prose-indigo mt-6 text-gray-500">
@@ -395,7 +395,7 @@ function FeaturesDesktop() {
                 style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                 aria-hidden={2 !== selectedIndex}
               >
-                <div className="w-[62.75rem] max-h-[60vh] overflow-y-auto rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+                <div className="w-[73rem] max-h-[60vh] overflow-y-auto rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
                   <div className='p-4'>
                     <dt className="text-base font-semibold leading-7 text-gray-900">PLAN ESTRATEGICO DE SEGURIDAD VIAL.</dt>
                     <div className="prose prose-lg prose-indigo mt-6 text-gray-500">
@@ -440,7 +440,7 @@ function FeaturesDesktop() {
                 style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                 aria-hidden={3 !== selectedIndex}
               >
-                <div className="w-[62.75rem] max-h-[60vh] overflow-y-auto rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+                <div className="w-[73rem] max-h-[60vh] overflow-y-auto rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
                   <div className='p-4'>
                     <dt className="text-base font-semibold leading-7 text-gray-900">GESTIÓN HUMANA.</dt>
                     <div className="prose prose-lg prose-indigo mt-6 text-gray-500">
@@ -491,17 +491,17 @@ export function PrimaryFeatures() {
     <section
       id="primary-features"
       aria-label="Features for simplifying everyday business tasks"
-      className="pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
+      className="pt-44 sm:pb-20 lg:pb-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Servicios
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
+          {/* <p className="mt-4 text-lg tracking-tight text-slate-700">
             Because you’d probably be a little confused if we suggested you
             complicate your everyday business tasks instead.
-          </p>
+          </p> */}
         </div>
         <FeaturesDesktop />
       </Container>
