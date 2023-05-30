@@ -4,9 +4,6 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import { BriefcaseIcon, CheckBadgeIcon, TruckIcon, UserGroupIcon } from '@heroicons/react/24/solid'
-// import screenshotContacts from '@/images/screenshots/contacts.png'
-// import screenshotInventory from '@/images/screenshots/inventory.png'
-// import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
 
 const features = [
   {
@@ -498,10 +495,6 @@ export function PrimaryFeatures() {
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Servicios
           </h2>
-          {/* <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
-          </p> */}
         </div>
         <FeaturesDesktop />
       </Container>

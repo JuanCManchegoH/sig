@@ -51,7 +51,7 @@ export default function HeroSection() {
                             <span className="sr-only">Your Company</span>
                             <img
                                 className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=sky&shade=600"
+                                src="/logo.svg"
                                 alt=""
                             />
                         </a>
@@ -110,7 +110,7 @@ export default function HeroSection() {
                                     SIG Consultoría Integral S.A.S
                                 </h1>
                                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                                    Consultoría personalizada para mejorar su rendimiento empresarial. Soluciones a medida.
+                                    Consultoría personalizada para mejorar su rendimiento empresarial.
                                 </p>
                                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                                     <a
