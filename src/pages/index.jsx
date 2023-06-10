@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import AboutUs from '@/components/AboutUs'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import HeroSection from '@/components/HeroSection'
+import { Allies } from '@/components/Allies'
 
 export default function Home() {
   const bgImage = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80";
@@ -19,6 +20,7 @@ export default function Home() {
         <ContactUs />
         <AboutUs />
         <Clients />
+        <Allies />
       </main>
       <Footer />
       <a href="https://api.whatsapp.com/send/?phone=573023004987&text=Hola,+deseo+contactar+con+ustedes." target="_blank" rel="noreferrer" className="fixed bottom-4 right-4 z-10" >
